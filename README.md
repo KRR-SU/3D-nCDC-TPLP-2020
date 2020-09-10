@@ -20,10 +20,15 @@ ASP PROGRAMS:
 ASP programs in the paper are under the folder "/ASP Programs". All programs are in ASP Core-2 Format.
 
 consistency_3d.lp : Main ASP program in Section 4.3.1 to check consistency of basic 3D-nCDC network
+
 consistency_3d_explain.lp : ASP program in Section 4.6 to explain source of inconsistency in the 3D-nCDC network
+
 disjunctive.lp : Subprogram for disjunctive 3D-nCDC constraints in Section 4.3.2
+
 default.lp : Subprogram for default 3D-nCDC constraints in Section 4.3.3
+
 connected_check.lp : Subprogram for checking connectedness of objects (i.e. whether they belong to Reg) in Section 4.4
+
 inference.lp : Subprogram for inferring unknown 3D-nCDC relations  in Section 4.5
 
 
@@ -90,9 +95,13 @@ ASP encoding of the input network for three applications in Section 4.7 of the t
 To find the solution of the example scenarios, run the following commands:
 
 ./clingo grid_enum.lp consistency_3d.lp inference.lp marine.lp
+
 ./clingo grid_enum.lp consistency_3d_explain.lp disjunctive.lp default.lp connected_check.lp building.lp
+
 ./clingo grid_enum.lp consistency_3d.lp disjunctive.lp default.lp connected_check.lp suspect1.lp
+
 ./clingo grid_enum.lp consistency_3d.lp disjunctive.lp default.lp connected_check.lp suspect2.lp
+
 ./clingo grid_enum.lp consistency_3d_explain.lp disjunctive.lp default.lp connected_check.lp suspect2.lp
 
 
@@ -113,5 +122,6 @@ building_double.lp  : instance B2 in the text
 building_double_consistent.lp  : instance B2' in the text
 
 suspect1.lp  : instance D1 in the text
+
 suspect2.lp  : instance D2 in the text
 
